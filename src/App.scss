@@ -1,0 +1,1290 @@
+@import url('https://fonts.googleapis.com/css2?family=Livvic:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap');
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root{
+  overflow-x: hidden;
+  .App{
+    width: 100vw;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    font-family: Livvic;
+    // justify-content: center;
+    a{
+      text-decoration: none;
+      color: #0097CC;
+    }
+// --------------------- NAV CSS START -------------------- //
+    nav{
+      position: fixed;
+      background: #FFCE25;
+      width: 80vw;
+      height: 90px;
+      font-size: 15px;
+      line-height: 125%;
+      display: flex;
+      justify-content: space-between;
+      font-weight: 700;
+      z-index: 2;
+      &>img{
+        height: 45px;
+        margin-top: 23px;
+        margin-left: 20px;
+        cursor: pointer;
+      }
+      .sideBar{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 380px;
+        height: 100vh;
+        background-color: white;
+        box-shadow: -1px -2px 16px rgba(127, 127, 127, 0.25);
+        padding: 100px 0 0 0;
+        // z-index: -1;
+        &>img{
+          position: absolute;
+          width: 24px;
+          // float: right;
+          // margin-right: 27.99px;
+          // margin-top: 14.99px;
+          top: 35px;
+          right: 30px;
+          cursor: pointer;
+        }
+        .basketCard{
+          display: flex;
+          overflow: hidden;
+          margin: 20px;
+          width: 340px;
+          height: 150px;
+          background: #F2F2F2;
+          border-radius: 6px;
+          &>img{
+            width: 110px;
+            height: 150px;
+            object-fit: cover;
+          }
+          .basketText{
+            padding: 20px;
+            position: relative;
+            &>p{
+              color: #0097CC;
+            }
+            .basketPrice{
+              display: flex;
+              align-items: center;
+              .select{
+                width: 60px;
+                height: 45px;
+                // background: #FFFFFF;
+                border: 1px solid #0097CC;
+                box-sizing: border-box;
+                border-radius: 8px;
+                position: relative;
+                font-weight: 700;
+                color: black;   
+                background-color: #FFFFFF;   
+                font-size: 18.4px;        
+              }
+              &>p{
+                margin: 0px 0 0 10px;
+                font-size: 20.3px;
+                &>span{
+                  font-size: 13.5px;
+                  padding-left: 3px;
+                }
+              }
+            }
+            
+            &>img{
+              position: absolute;
+              top: 22px;
+              right: 22px;
+              cursor: pointer;
+            }
+            &>p{
+              padding-right: 20px;
+              
+            }
+          }
+        }
+        .sub{
+          color: #7F7F7F;
+          padding: 20px 0px 0 40px;
+          font-size: 15px;
+        }
+        .total{
+          font-size: 40px;
+          padding: 0px 0px 0 40px;
+          &>span{
+            font-size: 27px;
+            padding: 0px 0px 0 3px;
+          }
+        }
+        .btn{
+          background-color: #0097CC;
+          font-weight: 700;
+          width: 300px;
+          height: 60px;
+          margin: 40px;
+          border: none;          
+          box-shadow: 1px 2px 8px rgba(127, 127, 127, 0.25);
+          border-radius: 6px;
+        }
+      }
+      .nav-desno{
+        display: flex;
+        width: 35%;
+        .korisnik{
+          display: flex;
+          align-items: center;
+          margin-right: 82.67px;
+          cursor: pointer;
+          &>img{
+            height: 32px;
+            margin-right: 16.67px;
+          }
+          &>p{
+            margin-top: 36px;
+            margin-bottom: 35px;
+          }
+        }
+        .kosarica{
+          // width: 200px;
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+          z-index: 1;
+          position: relative;
+          padding-left: 50px;
+          .full{
+            position: absolute;
+            height: 13px;
+            top: 27px;
+            left: 73px;
+          }
+          &>img:nth-child(2){
+            height: 32px;
+            margin-right: 16.67px;
+          }
+          &>p{
+            padding-left: 10px;
+            margin-top: 36px;
+            margin-bottom: 35px;
+          }
+          
+        }
+      }
+    }
+// --------------------- NAV CSS END --------------------- //
+
+// --------------------- FOOTER CSS END --------------------- //
+    .Footer{
+      width: 100vw;
+      height: 80px;
+      background: rgba(127, 127, 127, 0.1);
+      color: #7F7F7F;
+      flex-shrink: 0;
+      position: absolute;
+      bottom: 0;
+      &>p{
+        font-size: 15px;
+        font-weight: 600;
+        padding-left: 80px;
+        padding-top: 25px;
+      }
+    }
+// --------------------- FOOTER CSS END --------------------- //
+
+// --------------------- LOGIN CSS START -------------------- //
+    .Login{
+      width: 100%;
+      height: 100%;
+      // background-color: white;
+      .notFound{
+        position: absolute;
+        bottom: -20%;
+        font-weight: 700;
+        font-size: 15px;
+        color: red;
+      }
+      .frame{
+        position: absolute;
+        bottom: 0;
+        width: 20%;
+      }
+      .logo{
+        position: absolute;
+        width: 198px;
+        top: 5%;
+        left: 2.5%;
+      }
+      .prijava{
+        position: absolute;
+        left: 30%;
+        top: 10%;
+        width: 30%;
+        p:nth-child(1){
+          font-weight: 700;
+          font-size: 60.75px;
+          line-height: 75.94px;
+          margin-bottom: 20px;
+        }
+        p:nth-child(2){
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 27px;
+          margin-bottom: 40px;
+        }
+        label{
+          font-weight: 700;
+          font-size: 15px;
+          line-height: 18.75px;
+          margin-bottom: 10px;
+        }
+        button{
+          background-color: #FFCE25;
+          color: black;
+          font-weight: 700;
+          font-size: 20px;
+          line-height: 25px;
+          width: 40%;
+          height: 60px;
+          box-shadow: 1px 2px 8px rgba(127, 127, 127, 0.25);
+          border: none;
+          border-radius: 8px;
+        }
+        input{
+          width: 100%;
+          height: 60px;
+          background: #FFFFFF;        
+          border: 1px solid #7F7F7F;
+          box-sizing: border-box;
+          border-radius: 8px;
+          margin-bottom: 30px;        
+        }
+        .password{
+          position: relative;
+          &>img{
+            position: absolute;
+            width: 32px;
+            top: 47px;
+            right: 20px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+// --------------------- LOGIN CSS END -------------------- //
+
+// --------------------- WORKSHOPS CSS START -------------------- //
+
+    .Workshops{
+      line-height: 125%;
+      margin-top: 90px;
+      font-weight: 700;
+      font-size: 23px;
+      display: flex;
+      width: 80vw;
+      z-index: 1;
+      .sideNav{
+        width: 20%;
+        padding: 110px 3%;
+        p:nth-child(1){
+          font-size: 15px;
+          color: #7F7F7F;
+        }
+        p:nth-child(n+2):hover,
+        p:nth-child(n+2):active{
+          text-decoration: underline;
+          color: #0097CC;
+          cursor: pointer;
+        }
+        #dizajn::before,
+        #frontend::before,
+        #backend::before,
+        #marketing::before{
+          content: '';
+          display: block;
+          background: black;
+          width: 21.3px;
+          height: 21.3px;
+          float: left;
+          color: #7F7F7F;
+          margin: 2px 10.33px 0 0;
+        }
+        #dizajn::before{
+          -webkit-mask: url('./Images/dizajn.svg') no-repeat;
+          mask-size: cover;
+        }
+        #frontend::before{
+          -webkit-mask: url('./Images/frontend.svg') no-repeat;
+          mask-size: cover;
+        }
+        #backend::before{
+          -webkit-mask: url('./Images/backend.svg') no-repeat;
+          mask-size: cover;
+          width: 26.67px;
+          height: 18.67px;
+          margin: 4px 8.33px 0px -3px;
+        }
+        #marketing::before{
+          -webkit-mask: url('./Images/marketing.svg') no-repeat;
+          mask-size: cover;
+          width: 21.34px;
+          height: 29.33px;
+        }
+
+      }
+      .workshops{
+        width: 80%;
+        &>p:nth-child(1){
+          font-size: 40px;
+          padding: 74px 0 0 20px;
+        }
+        &>p:nth-child(2){
+          font-size: 15px;
+          color: #7F7F7F;
+          margin-top: -10px;
+          padding: 0 0 0 20px;
+          &>span{
+            color: black;
+          }        
+        }
+        .mainList{
+          width: 100%;
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          column-gap: 40px;
+          padding: 20px;
+          .workCard{
+            border-radius: 8px;
+            border: 1px solid #F2F2F2;
+            overflow: hidden;
+            background: #FFFFFF;
+            height: fit-content;
+            font-weight: 700;
+            margin: 0 0 40px 0; 
+            &:hover{
+              box-shadow: 1px 2px 16px rgba(127, 127, 127, 0.35);
+            }
+            .workText{
+              display: flex;
+              flex-direction: column;
+              .workDate{
+                font-size: 15px;
+                margin: 20px 40px 0 40px;
+                .datum{
+                  display: flex;
+                }
+                .datum:before{
+                  content: "";
+                  background: url('./Images/date.svg');
+                  float: left;
+                  background-size: 18px;
+                  background-size: contain;
+                  width: 18px;
+                  height: 18px;
+                  margin: 4px 3px 0 0;
+                  display: block;
+                }
+                .sat:before{
+                  content: "";
+                  background: url('./Images/sat.svg');
+                  float: left;
+                  background-size: 18px;
+                  background-size: contain;
+                  width: 18px;
+                  height: 18px;
+                  margin: 4px 3px 0 0;
+                  display: block;
+                  margin-left: 10px;
+                }
+              }
+              .workTitle{
+                font-size: 27px;
+                color: #0097CC;
+                margin: 10px 40px 10px 40px;
+                cursor: pointer;
+              }
+              .workPrice{
+                font-size: 29px;
+                margin: 0 40px 0 40px;
+                &>span{
+                  font-size: 15px;
+                  margin-left: 5px;
+                }
+              }
+              .btn{
+                background: #FFC80C;
+                box-shadow: 1px 2px 8px rgba(127, 127, 127, 0.25);
+                border-radius: 6px;
+                color: black;
+                width: 80%;
+                height: 50px;
+                align-self: center;
+                margin: 5% 10% 10% 10%;
+                font-weight: 700;
+                font-size: 18px;
+                border: none;
+              }
+            }            
+          }
+        }
+      }
+    }
+// --------------------- WORKSHOPS CSS END -------------------- //
+
+// --------------------- SHOPINFO CSS END -------------------- //
+.ShopInfo{
+      margin-top: 150px;
+      display: flex;
+      flex-direction: column;
+      width: 80%;
+      .mainPart{
+        display: flex;
+        .goback{
+          width: 20%;
+          padding: 20px;
+          &>p{
+            font-weight: 700;
+            font-size: 15px;
+            &>a{
+              color: black;
+            }
+            &::before{
+              content: "";
+              background: url('./Images/arrow.svg') no-repeat;
+              float: left;
+              background-size: 18px;
+              background-size: contain;
+              width: 21.33px;
+              height: 24px;
+              margin: 2px 10px 0 0;
+              display: block;
+            }
+          }
+        }
+        .workCard{
+          width: 80%;
+          margin-right: 20px;
+          .workImg{
+            &>img{
+              height: 380px;
+              object-fit: cover;
+              border-radius: 8px;
+            }
+          }
+          
+          .workText{
+            display: flex;
+            width: 100%;
+            margin-top: 40px;
+            padding-bottom: 80px;
+            .workTextLeft{
+              width: 60%;
+              position: relative;
+              &>img{
+                background: #1D1D1B;
+                border-radius: 6px;
+                width: 40px;              
+                padding: 5px;
+                position: absolute;
+                top: 15px;
+              }
+              .workDate{
+                font-size: 18px;
+                font-weight: 700;
+                margin: 20px 40px 0 60px;
+                .datum{
+                  display: flex;
+                }
+                .datum:before{
+                  content: "";
+                  background: url('./Images/date.svg');
+                  float: left;
+                  background-size: 18px;
+                  background-size: contain;
+                  width: 24px;
+                  height: 24px;
+                  margin: 2px 2px 0 0;
+                  display: block;
+                }
+                .sat:before{
+                  content: "";
+                  background: url('./Images/sat.svg');
+                  float: left;
+                  background-size: 18px;
+                  background-size: contain;
+                  width: 24px;
+                  height: 24px;
+                  margin: 2px 3px 0 0;
+                  display: block;
+                  margin-left: 20px;
+                }
+                
+              }
+              .workTitle{
+                color: #0097CC;
+                font-size: 60px;
+                font-weight: 700;
+                line-height: 120%;
+                margin-top: 20px;
+              }
+              .speaker{
+                font-weight: 700;
+                font-size: 18px;
+                &>span{
+                  font-size: 27px;
+                  padding-left: 3px;
+                }
+              }
+              .workContent{
+                font-size: 18px;
+                font-weight: 500;
+                margin-top: 40px;
+              }
+            }
+            .workTextRight{
+              width: 40%;
+              height: 320px;
+              padding: 50px 40px 50px 40px;
+              box-shadow: 1px 2px 16px rgba(127, 127, 127, 0.25);
+              border-radius: 8px;
+              margin-right: 20px;
+              margin-left: 80px;
+              &>p:nth-child(1){
+                font-size: 23px;
+                font-weight: 700;
+              }
+              &>p:nth-child(2){
+                font-size: 40px;
+                font-weight: 700;
+                &>span{
+                  font-size: 23px;
+                  margin-left: 3px;
+                }
+              }
+              &>p:nth-child(4){
+                color: #7F7F7F;;
+                font-size: 15px;
+                font-weight: 600;
+                margin: 10px 0 0 122px;
+              }
+              .kupovina{
+                display: flex;
+                .select{
+                  width: 80px;
+                  height: 60px;
+                  border: 1px solid #0097CC;
+                  box-sizing: border-box;
+                  border-radius: 8px;
+                  font-weight: 700;
+                  font-size: 23px;
+                }
+                .btn{
+                  background: #FFC80C;
+                  box-shadow: 1px 2px 8px rgba(127, 127, 127, 0.25);
+                  border-radius: 6px;
+                  color: black;
+                  width: 187px;
+                  height: 60px;
+                  align-self: center;
+                  margin: 0 10% 0 10%;
+                  font-weight: 700;
+                  font-size: 18px;
+                  border: none;
+                }
+              }
+            }
+          }
+        }
+      }
+      .similar{
+        width: 100%;
+        background: #F2F2F2;
+        margin-bottom: 80px;
+        &>p{
+          padding: 80px 20px 40px 20%;
+          font-weight: 700;
+          font-size: 40px;
+        }
+        
+        // padding: 20px;
+        .cards{
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          column-gap: 40px;
+          padding: 0 20px 0 20%;
+          .workCard{
+            width: 90%;
+            border-radius: 8px;
+            border: 1px solid #F2F2F2;
+            overflow: hidden;
+            background: #FFFFFF;
+            height: fit-content;
+            font-weight: 700;
+            margin: 0 0 40px 0; 
+            &:hover{
+              box-shadow: 1px 2px 16px rgba(127, 127, 127, 0.35);
+            }
+            .workText{
+              display: flex;
+              flex-direction: column;
+              .workDate{
+                font-size: 15px;
+                margin: 20px 40px 0 40px;
+                .datum{
+                  display: flex;
+                }
+                .datum:before{
+                  content: "";
+                  background: url('./Images/date.svg');
+                  float: left;
+                  background-size: 18px;
+                  background-size: contain;
+                  width: 18px;
+                  height: 18px;
+                  margin: 1px 3px 0 0;
+                  display: block;
+                }
+                .sat:before{
+                  content: "";
+                  background: url('./Images/sat.svg');
+                  float: left;
+                  background-size: 18px;
+                  background-size: contain;
+                  width: 18px;
+                  height: 18px;
+                  margin: 1px 3px 0 0;
+                  display: block;
+                  margin-left: 10px;
+                }
+              }
+              .workTitle{
+                font-size: 22px;
+                color: #0097CC;
+                margin: 10px 40px 10px 40px;
+                cursor: pointer;
+              }
+              .workPrice{
+                font-size: 29px;
+                margin: 0 40px 0 40px;
+                &>span{
+                  font-size: 15px;
+                  margin-left: 5px;
+                }
+              }
+              .btn{
+                background: #FFC80C;
+                box-shadow: 1px 2px 8px rgba(127, 127, 127, 0.25);
+                border-radius: 6px;
+                color: black;
+                width: 80%;
+                height: 50px;
+                align-self: center;
+                margin: 5% 10% 10% 10%;
+                font-weight: 700;
+                font-size: 18px;
+                border: none;
+              }
+            }            
+          }
+        }        
+
+      }
+    }
+  }
+}
+
+// --------------------- CHECKOUT CSS START -------------------- //
+
+.modal{  
+  .modal-dialog{
+    max-width: none !important;
+    width: 860px;
+    .modal-content{
+      border-radius: 16px;
+    }
+  }
+}
+.CheckOut{
+  font-family: Livvic;
+  padding: 42px 66px 60px 54px !important;
+  border-radius: 16px !important;
+  div{
+    position: relative;
+    &>p:nth-child(1){
+      font-size: 40px;
+      font-weight: 700;
+    }
+    &>p:nth-child(2){
+      font-size: 15px;
+      font-weight: 600;
+      color: #7F7F7F;
+      width: 50%;
+      padding-bottom: 20px;
+    }
+    &>img{
+      position: absolute;
+      top: 0;
+      right: 0;
+      cursor: pointer;
+    }
+  }
+  label{
+    font-size: 15px;
+    font-weight: 700;
+  }
+  input{
+    margin-bottom: 10px;
+  }
+  .btn{
+    background: #FFC80C;
+    border-radius: 8px;
+    width: 167px;
+    height: 60px;
+    color: black;
+    font-weight: 700;
+    font-size: 18px;
+    border: none;
+  }
+}
+
+// --------------------- CHECKOUT CSS END -------------------- //
+
+// ----------------- MEDIA CSS START ---------------- //// ----------------- MEDIA CSS START ---------------- //
+
+@media (max-width: 575.98px) {
+  #root{
+    overflow-x: hidden;
+    .App{
+      
+  // --------------------- NAV CSS START -------------------- //
+      nav{
+        width: 100vw;
+        height: 60px;
+        &>img{
+          height: 40px;
+          margin-top: 10px;
+          margin-left: 10px;
+        }
+        .sideBar{
+          width: 100%;
+          padding: 60px 0 0 0;
+          &>img{
+          }
+          .basketCard{
+            display: flex;
+            overflow: hidden;
+            width: 335px;
+            height: 140px;
+            &>img{
+              width: 89px;
+              height: 139px;
+              object-fit: cover;
+            }
+          }
+        }
+        .nav-desno{
+          .korisnik{
+            margin-right: 0;
+            cursor: pointer;
+            &>img{
+              height: 32px;
+              margin-right: 0;
+              margin-left: 20px;
+            }
+            &>p{
+              margin-top: 36px;
+              margin-bottom: 35px;
+            }
+          }
+          .kosarica{
+            cursor: pointer;
+            padding-left: 25px;
+            .full{
+              top: 15px;
+              left: 46px;
+            }
+            &>img:nth-child(2){
+              margin-right: 0px;
+            }
+            &>p{
+              display: none;
+            }            
+          }
+        }
+      }
+  // --------------------- NAV CSS END --------------------- //
+  
+  // --------------------- FOOTER CSS END --------------------- //
+      .Footer{
+        height: 40px;
+        &>p{
+          font-size: 11.52px;
+          font-weight: 500;
+          padding-left: 40px;
+          padding-top: 13px;
+        }
+      }
+  // --------------------- FOOTER CSS END --------------------- //
+  
+  // --------------------- LOGIN CSS START -------------------- //
+      .Login{
+        .notFound{
+          position: absolute;
+          bottom: -20%;
+          font-weight: 700;
+          font-size: 15px;
+          color: red;
+        }
+        .frame{
+          display: none;
+        }
+        .logo{
+          width: 137px;
+          top: 70px;
+          left: 198px;
+        }
+        .prijava{
+          position: absolute;
+          left: 0;
+          top: 20%;
+          width: 100%;
+          padding: 20px;
+          p:nth-child(1){
+            font-size: 32.4px;
+            line-height: 100%;
+            padding: 0 20px 0 20px;
+          }
+          p:nth-child(2){
+            font-size: 16.2px;
+            color: #7F7F7F;
+            margin-bottom: 20px;
+            padding: 0 20px 0 20px;
+          }
+          button{
+            width: 100%;
+          }
+        }
+      }
+  // --------------------- LOGIN CSS END -------------------- //
+  
+  // --------------------- WORKSHOPS CSS START -------------------- //
+  
+      .Workshops{
+        margin-top: 60px;
+        font-size: 23px;
+        display: flex;
+        width: 100vw;
+        .sideNav{
+          display: none;
+          width: 20%;
+          padding: 110px 3%;
+          p:nth-child(1){
+            font-size: 15px;
+            color: #7F7F7F;
+          }
+          p:nth-child(n+2):hover,
+          p:nth-child(n+2):active{
+            text-decoration: underline;
+            color: #0097CC;
+            cursor: pointer;
+          }
+          #dizajn::before,
+          #frontend::before,
+          #backend::before,
+          #marketing::before{
+            content: '';
+            display: block;
+            background: black;
+            width: 21.3px;
+            height: 21.3px;
+            float: left;
+            color: #7F7F7F;
+            margin: 2px 10.33px 0 0;
+          }
+          #dizajn::before{
+            -webkit-mask: url('./Images/dizajn.svg') no-repeat;
+            mask-size: cover;
+          }
+          #frontend::before{
+            -webkit-mask: url('./Images/frontend.svg') no-repeat;
+            mask-size: cover;
+          }
+          #backend::before{
+            -webkit-mask: url('./Images/backend.svg') no-repeat;
+            mask-size: cover;
+            width: 26.67px;
+            height: 18.67px;
+            margin: 4px 8.33px 0px -3px;
+          }
+          #marketing::before{
+            -webkit-mask: url('./Images/marketing.svg') no-repeat;
+            mask-size: cover;
+            width: 21.34px;
+            height: 29.33px;
+          }
+  
+        }
+        .workshops{
+          width: 100%;
+          &>p:nth-child(1){
+            font-size: 32.4px;
+            padding: 74px 0 0 20px;
+          }
+          &>p:nth-child(2){
+            font-size: 15px;
+            color: #7F7F7F;
+            margin-top: -10px;
+            padding: 0 0 0 20px;   
+          }
+          .mainList{
+            display: grid;
+            grid-template-columns: 1fr;
+            column-gap: 20px;
+            .workCard{
+              display: flex;
+              margin: 0 0 20px 0; 
+              .workImg{
+                width: 30vw;
+                &>img{
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                }
+                
+              }
+              .workText{
+                width: 70vw;
+                display: flex;
+                flex-direction: column;
+                .workDate{
+                  font-size: 14.4px;
+                  margin: 20px 0px -15px 22px;
+                  .datum:before{
+                    background-size: 15px;
+                    width: 15px;
+                    height: 15px;
+                    margin: 5px 3px 0 0;
+                  }
+                  .sat{
+                    display: none;
+                  }
+                  .sat:before{
+                    display: none;
+                  }
+                }
+                .workTitle{
+                  font-size: 18.9px;
+                  color: #0097CC;
+                  margin: 3px 20px 3px 22px;
+                  cursor: pointer;
+                }
+                .price{
+                  display: flex;
+                  .workPrice{
+                    font-size: 20.79px;
+                    margin: 5px 0px 0 20px;
+                    &>span{
+                      font-size: 14.4px;
+                    }
+                  }
+                  .btn{
+                    color: #FFC80C;
+                    box-shadow: 1px 2px 8px rgba(127, 127, 127, 0.25);
+                    border-radius: 6px;
+                    width: 40px;
+                    height: 40px;
+                    margin: 0px 0px 20px 40px;
+                    font-size: 1px;
+                    position: relative;
+                    &::before{
+                      position: absolute;
+                      top: 2px;
+                      left: 5px;
+                      content: "";
+                      background: url('./Images/kosarica.svg');
+                      background-size: 32px;
+                      background-size: contain;
+                      width: 30px;
+                      height: 30px;
+                      margin: 4px 3px 0 0;
+                      display: block;
+                    }
+                  }
+                }
+                
+              }            
+            }
+          }
+        }
+      }
+  // --------------------- WORKSHOPS CSS END -------------------- //
+  
+  // --------------------- SHOPINFO CSS END -------------------- //
+  .ShopInfo{
+        margin-top: 60px;
+        flex-direction: column;
+        width: 100%;
+        .mainPart{
+          flex-direction: column;
+          .goback{
+            width: 100%;
+            padding: 20px;
+            &>p{
+              font-weight: 700;
+              font-size: 15px;
+              &>a{
+                color: #7F7F7F;
+              }
+              &::before{
+                content: "";
+                background: url('./Images/arrow.svg') no-repeat;
+                background-size: 16px;
+                width: 16px;
+                height: 14px;
+                margin: 4px 9px 0 0;
+              }
+            }
+          }
+          .workCard{
+            width: 100%;
+            padding: 0px;
+            .workImg{
+              &>img{
+                width: 90%;
+                height: 190px;
+                margin: 0 0px 0 20px;
+              }
+            }            
+            .workText{
+              display: flex;
+              flex-direction: column;
+              width: 100%;
+              margin-top: 20px;
+              padding-bottom: 0px;
+              padding-left: 0px;
+              .workTextLeft{
+                width: 100%;
+                &>img{
+                  display: none;
+                }
+                .workDate{
+                  font-size: 14.4px;
+                  margin: 0px 0px 0 20px;
+                  .datum{
+                    display: flex;
+                  }
+                  .datum:before{
+                    width: 18px;
+                    height: 18px;
+                    margin: 0px 2px 0 0;
+                  }
+                  .sat:before{
+                    width: 18px;
+                    height: 18px;
+                    margin: 0px 3px 0 0;
+                    margin-left: 20px;
+                  }
+                  
+                }
+                .workTitle{
+                  font-size: 32.4px;
+                  font-weight: 700;
+                  line-height: 120%;
+                  margin: 0 0 0 20px;
+                }
+                .speaker{
+                  font-size: 14.4px;
+                  margin-left: 20px;
+                  &>span{
+                    font-size: 17.28px;
+                    padding-left: 3px;
+                  }
+                }
+                .workContent{
+                  font-size: 18px;
+                  margin: 20px 10px 0 20px;
+                }
+              }
+              .workTextRight{
+                display: flex;
+                width: 100%;
+                background: #FFFFFF;
+                // position: fixed;
+                bottom: 0;
+                height: 80px;
+                // padding: 50px 40px 50px 40px;
+                box-shadow: 1px 2px 16px rgba(127, 127, 127, 0.25);
+                border-radius: 0px;
+                margin-right: 0;
+                margin-left: 0;
+                &>p:nth-child(1){
+                  display: none;
+                }
+                &>p:nth-child(2){
+                  font-size: 20.79px;
+                  margin: -15px 0 0 -20px;
+                  &>span{
+                    font-size: 18px;
+                    margin-left: 3px;
+                  }
+                }
+                &>p:nth-child(4){
+                  display: none;
+                }
+                .kupovina{
+                  display: flex;
+                  .select{
+                    width: 69px;
+                    height: 44px;
+                    font-size: 21.38px;
+                    margin: -20px 0 0 10px;
+                  }
+                  .btn{
+                    box-shadow: 1px 2px 8px rgba(127, 127, 127, 0.25);
+                    width: 160px;
+                    height: 60px;
+                    align-self: center;
+                    margin: 0 10% 0 10%;
+                    font-size: 16.2px;
+                    border: none;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .similar{
+          width: 100%;
+          background: #F2F2F2;
+          margin-bottom: 80px;
+          &>p{
+            padding: 40px 20px 0px 40px;
+            font-size: 25.92px;
+          }
+          
+          // padding: 20px;
+          .cards{
+            grid-template-columns: 1fr;
+            column-gap: 20px;
+            padding: 0 20px 0 20px;
+            .workCard{
+              display: flex;
+              width: 100%;
+              margin: 0 0 20px 0; 
+              .workImg{
+                width: 30vw;
+                &>img{
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                }
+              }
+              .workText{
+                width: 70vw;
+                .workDate{
+                  font-size: 14.4px;
+                  margin: 20px 0px -15px 22px;
+                  .datum:before{
+                    background-size: 15px;
+                    width: 15px;
+                    height: 15px;
+                    margin: 2px 3px 0 0;
+                  }
+                  .sat{
+                    display: none;
+                  }
+                }
+                .workTitle{
+                  font-size: 18.9px;
+                  color: #0097CC;
+                  margin: 3px 20px 3px 22px;
+                  cursor: pointer;
+                }
+                .price{
+                  display: flex;
+                  .workPrice{
+                    font-size: 20.79px;
+                    margin: 5px 0px 0 20px;
+                    &>span{
+                      font-size: 14.4px;
+                    }
+                  }
+                }
+                
+                .btn{
+                  color: #FFC80C;
+                  width: 40px;
+                  height: 40px;
+                  margin: 0 0 20px 40px;
+                  font-size: 1px;
+                  position: relative;
+                  &::before{
+                    position: absolute;
+                    top: 2px;
+                    left: 5px;
+                    content: "";
+                    background: url('./Images/kosarica.svg');
+                    background-size: 32px;
+                    background-size: contain;
+                    width: 30px;
+                    height: 30px;
+                    margin: 4px 3px 0 0;
+                    display: block;
+                  }
+                }
+              }            
+            }
+          }        
+  
+        }
+      }
+    }
+  }
+  
+  // --------------------- CHECKOUT CSS START -------------------- //
+  .modal{  
+    .modal-dialog{
+      max-width: none !important;
+      width: 100%;
+      margin: 0 !important;
+      .modal-content{
+        border-radius: 16px;
+      }
+    }
+  }
+  .CheckOut{
+    div{
+      position: relative;
+      &>p:nth-child(1){
+        font-size: 32px;
+      }
+      &>p:nth-child(2){
+        font-size: 13.5px;
+        width: 100%;
+      }
+      &>img{
+        top: -40px;
+        right: -40px;
+      }
+    }
+    label{
+      font-size: 13.5px;
+    }
+    .btn{
+      width: 100%;
+      border: none;
+    }
+  }
+}
